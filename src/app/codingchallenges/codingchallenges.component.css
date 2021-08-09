@@ -1,0 +1,7 @@
+.container-fluid{
+    margin-top: 2%;
+}
+.card{
+    height: 30vh;
+    border-radius: 10px;
+}

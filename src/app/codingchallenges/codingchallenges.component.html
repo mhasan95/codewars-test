@@ -1,0 +1,40 @@
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Check Valid IP</h5>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" [(ngModel)]="search">
+                    <button class="btn btn-primary" (click)="isValidIP()">Go somewhere</button>
+                </form>
+                <br/>
+                {{x}}
+                </div>
+              </div>
+        </div>
+        <div class="col-6">
+            <div class="card" >
+                <div class="card-body">
+                  <h5 class="card-title">Check Prime Number</h5>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" name="prime" placeholder="Search" aria-label="prime" [(ngModel)]="prime">
+                    <button class="btn btn-primary" (click)="isPrime()">Go somewhere</button>
+                </form>
+                <br/>
+                {{str1}}
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row " style="margin-top: 5vh;">
+        <div class="col-12">
+            <div class="card" style="height: 55vh;" >
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <div id="container"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
