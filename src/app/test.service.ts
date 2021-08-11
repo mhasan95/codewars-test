@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TestService {
-
+   
   constructor() { }
   checkIP(str: string) : boolean {
     var a = str.split('.');
@@ -30,11 +30,11 @@ export class TestService {
 
   public options: any = {
     title: {
-      text: 'Solar Employment Growth by Sector, 2010-2016'
+      text: ''
   },
   
   subtitle: {
-      text: 'Source: thesolarfoundation.com'
+      text: ''
   },
   
   yAxis: {
@@ -109,6 +109,25 @@ export class TestService {
        return false; }
         else return true;
 
+}
+liked(count: number , legend: number, names : Array<string>): string{
+    switch(count){
+        case 0:
+            return 'nobody likes this';
+            break;
+        case 1:
+          return names[0] + ' like this';
+        break;
+        case 2:
+          return names[0]+ ' and '  + names[1] + ' likes this';
+          break;
+          case 3:
+             return names[0] + ', ' + names[1] + ' and '+ names[2] + ' likes this';
+            break;
+            default:
+              return names[0] + ', ' + names[1] + ' and '+ legend + ' others likes this';
+    
+      }
 }
 
 }

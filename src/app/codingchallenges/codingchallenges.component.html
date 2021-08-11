@@ -1,6 +1,6 @@
 <div class="container-fluid ">
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Check Valid IP</h5>
@@ -10,31 +10,68 @@
                 </form>
                 <br/>
                 {{x}}
+                <h5 class="card-title">Check Prime Number</h5>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="text" name="prime" placeholder="Search" aria-label="prime" [(ngModel)]="prime">
+                  <button class="btn btn-primary" (click)="isPrime()">Go somewhere</button>
+              </form>
+              <br/>
+              {{str1}}
                 </div>
               </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
+          <div class="card">
+            <img src="../../assets/santorini-1920.jpg" class="card-img-top" alt="..." style="height: 38vh; width: 62vh;">
+            <div class="card-body">
+             
+              <a (click)="onlike('like')" class="btn btn-primary"><i class="fa fa-thumbs-up"></i> Like</a>
+              <a (click)="onlike('dislike')" class="btn btn-primary"><i class="fa fa-thumbs-down"></i> DisLike</a>
+              {{mssg}}
+            </div>
+          </div>
+      </div>
+        <div class="col-4">
             <div class="card" >
                 <div class="card-body">
-                  <h5 class="card-title">Check Prime Number</h5>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" name="prime" placeholder="Search" aria-label="prime" [(ngModel)]="prime">
-                    <button class="btn btn-primary" (click)="isPrime()">Go somewhere</button>
-                </form>
-                <br/>
-                {{str1}}
+                  <h5 class="card-title">FaceBook</h5>
+                  <div class="row" style="font-weight:700;">
+                    <div class="col-4"> Product</div>
+                    <div class="col-4">Price</div>
+                    <div class="col-4">Add /Delete</div>
+
+                  </div>
+                  <div class="row" *ngFor="let product of products">
+    
+              
+                    <div class="col-4"> {{product.name}}</div>
+                    <div class="col-4"> {{product.price}}</div>
+                    <div class="col-4"><a class="btn btn-primary">Add to Cart</a></div>
+
+                  </div>
+                  
+            
+                  
+               
                 </div>
               </div>
         </div>
     </div>
     <div class="row " style="margin-top: 5vh;">
-        <div class="col-12">
-            <div class="card" style="height: 55vh;" >
+        <div class="col-6">
+            <div class="card" style="height: 35vh;" >
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <div id="container"></div>
                 </div>
               </div>
         </div>
+        <div class="col-6">
+          <div class="card" style="height: 35vh;" >
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+              </div>
+            </div>
+      </div>
     </div>
 </div>
